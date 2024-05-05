@@ -120,16 +120,9 @@ class _DisplayWidgetState extends State<DisplayWidget> {
           final selectedItem = items[index];
           final bool isRecentAddition =
               selectedItem.index == recentlyAddedIndex;
-          final bool isRecentlyRemoved =
-              selectedItem.index == recentlyRemovedIndex;
-
           return ListTile(
             title: Container(
-              color: isRecentAddition
-                  ? Colors.green
-                  : isRecentlyRemoved
-                      ? Colors.red
-                      : null,
+              color: isRecentAddition ? Colors.green : null,
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [

@@ -49,7 +49,7 @@ class MainPage extends StatelessWidget {
         title: const Center(child: Text('Example')),
       ),
       body: Padding(
-        padding: const EdgeInsets.all(8.0),
+        padding: const EdgeInsets.all(7.0),
         child: DisplayWidget(fibonacciList: fibonacciListCreate(41)),
       ),
     );
