@@ -32,7 +32,7 @@ class MainPage extends StatelessWidget {
 
   List<FibonacciItem> fibonacciListCreate(int count) {
     List<FibonacciItem> fibonacciList = [];
-    int a = 0, b = 1;
+    int a = 0, b = 1, c = 1;
     for (int i = 0; i < count; i++) {
       fibonacciList.add(FibonacciItem(a, i));
       int temp = a + b;
@@ -50,7 +50,7 @@ class MainPage extends StatelessWidget {
       ),
       body: Padding(
         padding: const EdgeInsets.all(7.0),
-        child: DisplayWidget(fibonacciList: fibonacciListCreate(41)),
+        child: DisplayWidget(fibonacciList: fibonacciListCreate(42)),
       ),
     );
   }

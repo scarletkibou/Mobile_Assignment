@@ -53,9 +53,12 @@ class _DisplayWidgetState extends State<DisplayWidget> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text(
-                    'index ${currentItem.index}, Number: ${currentItem.value}',
-                    style: const TextStyle(fontSize: 18),
+                  Expanded(
+                    child: Text(
+                      'index ${currentItem.index}, Number: ${currentItem.value}',
+                      style: const TextStyle(fontSize: 18),
+                      overflow: TextOverflow.ellipsis,
+                    ),
                   ),
                   Icon(
                     _getIcon(currentItem.value),
@@ -76,7 +79,7 @@ class _DisplayWidgetState extends State<DisplayWidget> {
                 context: context,
                 builder: (BuildContext context) {
                   return Container(
-                    height: 400,
+                    height: MediaQuery.of(context).size.height * 0.6,
                     padding: const EdgeInsets.all(8.0),
                     child: Column(
                       children: [
@@ -126,9 +129,12 @@ class _DisplayWidgetState extends State<DisplayWidget> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text(
-                    'Number : ${selectedItem.value}\nIndex : ${selectedItem.index}',
-                    style: const TextStyle(fontSize: 18),
+                  Expanded(
+                    child: Text(
+                      'Number : ${selectedItem.value}\nIndex : ${selectedItem.index}',
+                      style: const TextStyle(fontSize: 18),
+                      overflow: TextOverflow.ellipsis,
+                    ),
                   ),
                   Icon(
                     _getIcon(selectedItem.value),
